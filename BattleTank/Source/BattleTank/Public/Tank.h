@@ -16,10 +16,6 @@ public:
 	// Sets default values for this pawn's properties
 	ATank();
 
-protected:
-	UTankAimingComponent * TankAimingComponent = nullptr;
-
-public:	
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
@@ -30,5 +26,11 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 	void AimAt(FVector HitLocation);
+
+	UFUNCTION(BlueprintCallable, Category = Setup)
+	void SetBarrelReference(UStaticMeshComponent * BarrelToSet);
+
+protected:
+	UTankAimingComponent * TankAimingComponent = nullptr;
 	
 };
