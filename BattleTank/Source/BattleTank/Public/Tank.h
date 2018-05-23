@@ -27,6 +27,9 @@ public:
 
 	void AimAt(FVector HitLocation, float LaunchSpeed);
 
+	UFUNCTION(BlueprintCallable, Category = Firing)
+	void Fire();
+
 	UFUNCTION(BlueprintCallable, Category = Setup)
 	void SetBarrelReference(UTankBarrel * BarrelToSet);
 
