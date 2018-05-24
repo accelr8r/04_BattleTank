@@ -41,6 +41,7 @@ public:
 	float GetLaunchSpeed();
 
 protected:
+	UPROPERTY(BlueprintReadOnly)
 	UTankAimingComponent * TankAimingComponent = nullptr;
 
 	UPROPERTY(BlueprintReadOnly)
